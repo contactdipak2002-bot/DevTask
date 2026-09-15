@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Pro - Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Devtrack Pro</h1>
+            <button id="theme-toggle">🌙</button>
+        </div>
+        
+        <!-- Task Form -->
+        <form id="task-form">
+            <input type="text" id="task-title" placeholder="Task title..." required>
+            <select id="task-priority">
+                <option value="Low">Low Priority</option>
+                <option value="Medium" selected>Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+            <button type="submit" id="submit-btn">Add Task</button>
+        </form>
+
+        <!-- Search & Filter Controls -->
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="🔍 Search tasks...">
+            <select id="filter-priority">
+                <option value="All">All Priorities</option>
+                <option value="High">High Only</option>
+                <option value="Medium">Medium Only</option>
+                <option value="Low">Low Only</option>
+            </select>
+        </div>
+
+        <!-- Dynamic Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats">
+            <span>Total: <strong id="total-count">0</strong></span>
+            <span>Completed: <strong id="completed-count">0</strong></span>
+            <span>Progress: <strong id="progress-text">0%</strong></span>
+        </div>
+
+        <!-- Task List -->
+        <ul id="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
